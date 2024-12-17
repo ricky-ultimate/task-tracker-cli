@@ -13,7 +13,15 @@ export class TaskManager {
   private filePath: string;
 
   constructor() {
-    this.filePath = path.join(__dirname, "tasks.json");
+    const jsonFolderPath = path.join(__dirname, "..", "json");
+    this.filePath = path.join(jsonFolderPath, "tasks.json");
+
+    // Ensure the json folder exists
+    if (!fs.existsSync(jsonFolderPath)) {
+      fs.mkdirSync(jsonFolderPath);
+    }
+
+    // Ensure the tasks.json file exists
     if (!fs.existsSync(this.filePath)) {
       fs.writeFileSync(this.filePath, JSON.stringify([]));
     }
