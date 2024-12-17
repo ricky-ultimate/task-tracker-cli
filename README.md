@@ -125,10 +125,10 @@ npm run start list done
 ```
 task-tracker-cli/
 ├── src/                  # Source TypeScript files
-│   ├── main.ts          # Main CLI logic
+│   ├── main.ts           # Main CLI logic
 │   ├── taskManager.ts    # Task management logic
 ├── dist/                 # Compiled JavaScript files
-├── tasks/                 # Folder to store tasks.json
+├── tasks/                # Folder to store tasks.json
 │   └── tasks.json        # JSON file storing tasks
 ├── package.json          # Project configuration
 ├── tsconfig.json         # TypeScript configuration
